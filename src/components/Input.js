@@ -4,10 +4,7 @@ const Input = () => (
   <form>
     <h4>Add NEW BOOK</h4>
     <input type="text" placeholder="Book title" />
-    <select type="category" value="Category">
-      <option>Novel</option>
-      <option>Action</option>
-    </select>
+    <input type="text" placeholder="Book author" />
     <button type="submit">Add Book</button>
   </form>
 );

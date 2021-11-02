@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Categories from './components/categories';
-import Books from './components/books';
-import Input from './components/input';
-import Navbar from './components/navbar';
+import Categories from './components/Categories';
+import Books from './components/Books';
+import Input from './components/Input';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/books">
+        <Route exact path="/">
           <Books />
           <Input />
         </Route>
