@@ -6,7 +6,10 @@ const Navbar = () => (
     <h2>BookStore</h2>
     <ul>
       <li>
-        <Link to="/books">Books</Link>
+        <Link to="/Books">Books</Link>
+      </li>
+      <li>
+        <Link to="/bookslist">BooksList</Link>
       </li>
       <li>
         <Link to="/categories">Categories</Link>
