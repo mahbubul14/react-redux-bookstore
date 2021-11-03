@@ -1,22 +1,26 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Navbar from './components/Navbar';
+import store from './redux/cofigureStore';
+import AllBooks from './components/BooksList';
 import Categories from './components/Categories';
-import BooksList from './components/BooksList';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <BooksList />
-        </Route>
-        <Route path="/categories">
-          <Categories />
-        </Route>
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <AllBooks />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+        </Switch>
+      </div>
+    </Provider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 const Navbar = () => {
   const links = [
@@ -22,12 +23,11 @@ const Navbar = () => {
         <ul>
           {links.map((link) => (
             <li key={link.id}>
-              <NavLink
+              <Link
                 to={link.path}
-                exact
               >
                 {link.text}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>

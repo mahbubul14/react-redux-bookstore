@@ -1,39 +1,60 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
-const InputBook = (props) => {
+function InputBook() {
+  const dispatch = useDispatch();
   const [inputBook, setInputBook] = useState({
     title: '',
     author: '',
+    category: '',
   });
 
   const onChange = (e) => {
-    setInputBook({
-      ...inputBook,
+    setInputBook((prevState) => ({
+      ...prevState,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addBook(inputBook);
-    setInputBook({
-      title: '',
-      author: '',
-    });
+    const payload = {
+      ...inputBook,
+      id: uuidv4(),
+    };
+    dispatch(addBook(payload));
   };
-
+  const { title, author, category } = inputBook;
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="title" placeholder="Book Title" value={inputBook.title} onChange={onChange} required />
-      <input type="text" name="author" placeholder="Book Author" value={inputBook.author} onChange={onChange} required />
-      <button type="submit">Add Book</button>
-    </form>
+    <div>
+      <h2>ADD NEW BOOK</h2>
+      <form>
+        <input
+          name="title"
+          type="text"
+          placeholder="Book title"
+          value={title}
+          onChange={onChange}
+        />
+        <input
+          name="author"
+          type="text"
+          placeholder="Book author"
+          value={author}
+          onChange={onChange}
+        />
+        <select name="category" id="categories" value={category} onChange={onChange}>
+          <option value="First Category">first category</option>
+          <option value="Second Category">second category</option>
+          <option value="Third Category">third category</option>
+          <option value="Fourth Category">fourth category</option>
+        </select>
+        <button type="button" onClick={handleSubmit}>ADD BOOK</button>
+      </form>
+    </div>
   );
-};
-
-InputBook.propTypes = {
-  addBook: PropTypes.func.isRequired,
-};
+}
 
 export default InputBook;
