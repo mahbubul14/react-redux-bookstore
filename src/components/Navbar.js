@@ -16,11 +16,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
-      <ul>
-        {links.map((link) => (<li key={link.id}><Link to={link.path} exact="true">{link.text}</Link></li>))}
-      </ul>
-    </nav>
+    <div>
+      <h1>BookStore CMS</h1>
+      <nav>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <Link to={link.path} exact="true">{link.text}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 

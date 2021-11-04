@@ -8,20 +8,20 @@ export const addBook = (payload) => ({
   payload,
 });
 
-export const removeBook = (payload) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payload,
+  id,
 });
 
-const reducer = (state = initialState, action) => {
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((books) => books.id !== action.id);
     default:
       return state;
   }
 };
 
-export default reducer;
+export default booksReducer;
