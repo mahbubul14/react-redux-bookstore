@@ -12,8 +12,8 @@ const AddBook = () => {
     e.preventDefault();
     const newBook = {
       id: uuidv4(),
-      title: title || 'Things Fall Apart',
-      author: author || 'Chinua Achebe',
+      title: title || 'Lost of Symbol',
+      author: author || 'Dan Brown',
     };
 
     dispatch(addBook(newBook));
