@@ -17,6 +17,7 @@ const Books = (props) => {
   return (
     <div>
       <span>{title}</span>
+      <br />
       <span>{author}</span>
       <div>
         <button onClick={removeHandler} type="button">Remove</button>
