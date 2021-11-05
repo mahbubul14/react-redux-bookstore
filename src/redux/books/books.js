@@ -8,7 +8,7 @@ const initialState = [];
 
 export const addBook = (payload) => async (dispatchBook) => {
   const books = {
-    title: `${payload.title}&&&${payload.author}`,
+    title: `${payload.title} by ${payload.author}`,
     category: `${payload.category}`,
     item_id: `${payload.id}`,
   };
