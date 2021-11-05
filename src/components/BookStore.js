@@ -5,7 +5,7 @@ import BookList from './BookList';
 const BookStore = () => (
   <div>
     <BookList />
-    <h2>Welcome to BookStore</h2>
+    <h2>Add New Book</h2>
     <AddBook />
   </div>
 );
