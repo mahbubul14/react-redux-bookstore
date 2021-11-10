@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 
 const BookList = () => {
@@ -6,17 +7,17 @@ const BookList = () => {
     {
       title: 'Da Vinci Code',
       author: 'Dan Brown',
-      id: 1,
+      id: uuidv4(),
     },
     {
       title: 'Lost of Symbols',
       author: 'Dan Brown',
-      id: 2,
+      id: uuidv4(),
     },
     {
       title: 'Harry Porter',
       author: 'J.K. Rowling',
-      id: 3,
+      id: uuidv4(),
     },
   ];
 
