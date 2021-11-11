@@ -39,6 +39,8 @@ nav {
 
 .rmBtn {
   margin-left: 2rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 5rem;
+  height: 2rem;
+  font-size: 17px;
+  margin-top: 1.2rem;
 }
