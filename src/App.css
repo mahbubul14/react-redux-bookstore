@@ -1,5 +1,6 @@
 .navbar > li {
   list-style: none;
+  margin-right: 2rem;
 }
 
 a {
@@ -8,6 +9,15 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
   font-size: x-large;
 }
