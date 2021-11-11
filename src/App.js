@@ -8,6 +8,7 @@ import Nav from './component/nav';
 function App() {
   return (
     <Router>
+      <h1>Welcome to Bookstore CMS</h1>
       <Nav />
       <Routes>
         <Route exact path="/" element={<BookList />} />

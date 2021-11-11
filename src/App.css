@@ -9,4 +9,5 @@ a {
 .navbar {
   display: flex;
   justify-content: space-evenly;
+  font-size: x-large;
 }
