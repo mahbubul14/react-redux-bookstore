@@ -12,10 +12,14 @@ const Book = ({ book }) => {
 
   return (
     <div>
-      <li>
-        <p>{book.title}</p>
+      <li className="item">
+        <p>
+          {book.title}
+          {' '}
+          __
+        </p>
         <p>{book.category}</p>
-        <button onClick={() => removeBookHandler(book.item_id)} type="button">Remove</button>
+        <button onClick={() => removeBookHandler(book.item_id)} type="button" className="rmBtn">Remove</button>
       </li>
     </div>
   );
