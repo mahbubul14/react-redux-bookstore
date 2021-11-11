@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBooks } from '../redux/books/books';
-import InsertBook from './InsertBook';
 import Book from './Book';
+import AddBook from './AddBook';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
@@ -16,7 +16,7 @@ const BookList = () => {
       {books.map((book) => (
         <Book key={book.item_id} book={book} />
       ))}
-      <InsertBook />
+      <AddBook />
     </ul>
   );
 };

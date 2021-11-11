@@ -3,8 +3,17 @@ import axios from 'axios';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOKS = 'bookStore/books/GET_BOOKS';
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LH9csQts5aBejC5xlmX7/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mvqRpv8UPFG46lOVXmB7/books';
 const initialState = [];
+
+export const removeBook = (payload) => async (dispatch) => {
+  const { data } = await axios.delete(
+    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mvqRpv8UPFG46lOVXmB7/books/${payload}`,
+  );
+  if (data) {
+    dispatch({ type: REMOVE_BOOK, payload });
+  }
+};
 
 export const addBook = (payload) => async (dispatch) => {
   const { data } = await axios.post(
@@ -18,15 +27,6 @@ export const addBook = (payload) => async (dispatch) => {
   );
   if (data) {
     dispatch({ type: ADD_BOOK, payload });
-  }
-};
-
-export const removeBook = (payload) => async (dispatch) => {
-  const { data } = await axios.delete(
-    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LH9csQts5aBejC5xlmX7/books/${payload}`,
-  );
-  if (data) {
-    dispatch({ type: REMOVE_BOOK, payload });
   }
 };
 
