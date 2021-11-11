@@ -23,10 +23,10 @@ const InsertBook = () => {
 
   return (
     <form onSubmit={submitBookToStore}>
-      <div className="col-auto">
+      <div>
         <h3>Add Book</h3>
-        <input className="add-book" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
-        <input className="add-book" placeholder="Add Author" value={author} type="text" onChange={(e) => setAuthor(e.target.value)} />
+        <input placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
+        <input placeholder="Add Author" value={author} type="text" onChange={(e) => setAuthor(e.target.value)} />
         <button type="submit"> Add Book</button>
       </div>
     </form>
