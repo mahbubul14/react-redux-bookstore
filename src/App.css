@@ -1,6 +1,6 @@
 body {
   margin: 1rem;
-  background-color: #f5f6fa;
+  background-color: whitesmoke;
   padding: 40px;
 }
 
@@ -30,7 +30,6 @@ h1 {
 
 .nav {
   justify-content: flex-start;
-  background-color: #f3f4f8;
 }
 
 .rmBtn {
@@ -45,27 +44,6 @@ h1 {
   margin: 3rem;
   width: 85%;
   height: 40%;
-}
-
-.add-book {
-  margin-right: 20px;
-  width: 50%;
-  height: 30px;
-}
-
-.category {
-  margin-right: 20px;
-  width: 180px;
-  height: 30px;
-}
-
-.submit {
-  margin-right: 20px;
-  width: 150px;
-  height: 30px;
-  background-color: #0290ff;
-  color: white;
-  font-weight: bold;
 }
 
 .column {
@@ -88,12 +66,13 @@ h1 {
 
 .btn {
   color: #0290ff;
-  background-color: white;
+  background-color: #fafafa;
   border: none;
 }
 
 .btn-container {
   margin-top: -10px;
+  background-color: #fafafa;
 }
 
 .book-list {
@@ -113,6 +92,42 @@ h1 {
 
 .black {
   color: black;
+}
+
+.icon {
+  color: #0290ff;
+  margin-top: 20px;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.insert {
+  width: 100%;
+}
+
+.add-book {
+  margin-right: 20px;
+  width: 60%;
+  height: 30px;
+}
+
+.category {
+  margin-right: 20px;
+  height: 30px;
+
+  /* width: 180px; */
+}
+
+.submit {
+  margin-right: 20px;
+
+  /* width: 150px; */
+  height: 30px;
+  background-color: #0290ff;
+  color: white;
+  font-weight: bold;
 }
 
 .percent {
@@ -165,13 +180,5 @@ h1 {
   border-radius: 50%;
   border-left: 3px solid transparent;
   transform: rotate(45deg);
-  margin-right: -25%;
-}
-
-.icon {
-  color: #0290ff;
-}
-
-.nav-container {
-  justify-content: space-between;
+  margin-right: -15%;
 }
