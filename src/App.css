@@ -116,14 +116,10 @@ h1 {
 .category {
   margin-right: 20px;
   height: 30px;
-
-  /* width: 180px; */
 }
 
 .submit {
   margin-right: 20px;
-
-  /* width: 150px; */
   height: 30px;
   background-color: #0290ff;
   color: white;
