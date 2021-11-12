@@ -23,11 +23,11 @@ const AddBook = () => {
 
   return (
     <form onSubmit={submitBookToStore}>
-      <div className="col-auto">
-        <h3>Add Book</h3>
+      <h3>ADD NEW BOOK</h3>
+      <div className="insert">
         <input className="add-book" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
-        <input className="add-book" placeholder="Add Category" value={category} type="text" onChange={(e) => setCategory(e.target.value)} />
-        <button type="submit"> Add Book</button>
+        <input className="category" placeholder="Add Category" value={category} type="text" onChange={(e) => setCategory(e.target.value)} />
+        <button type="submit" className="submit"> ADD BOOK</button>
       </div>
     </form>
   );

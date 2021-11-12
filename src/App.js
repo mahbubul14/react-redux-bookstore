@@ -8,11 +8,13 @@ import Nav from './component/nav';
 function App() {
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route exact path="/" element={<BookList />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
+      <div className="container">
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<BookList />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -13,13 +13,15 @@ const Book = ({ book }) => {
   return (
     <div>
       <li className="item">
-        <p>
-          {book.title}
-          {' '}
-          __
-        </p>
-        <p>{book.category}</p>
-        <button onClick={() => removeBookHandler(book.item_id)} type="button" className="rmBtn">Remove</button>
+        <div className="column flex gray">
+          <p>{book.category}</p>
+          <p className="book-title">{book.title}</p>
+          <div className="flex">
+            <button className="gap-r btn" type="button">Comments</button>
+            <button onClick={() => removeBookHandler(book.item_id)} type="button" className="rmBtn gap-r btn">Remove</button>
+            <button className="gap-r btn" type="button">Edit</button>
+          </div>
+        </div>
       </li>
     </div>
   );

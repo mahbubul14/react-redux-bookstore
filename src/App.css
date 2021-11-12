@@ -1,5 +1,11 @@
 body {
   margin: 1rem;
+  background-color: #f5f6fa;
+  padding: 40px;
+}
+
+.gray {
+  color: gray;
 }
 
 li {
@@ -11,36 +17,77 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  display: flex;
+.navLink {
+  margin-top: 35px;
+  font-size: 1.2rem;
 }
 
 h1 {
   text-align: center;
   font-size: 2rem;
+  color: #0290ff;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-}
-
-.list {
-  text-align: center;
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  font-size: 1.3rem;
+.nav {
+  justify-content: flex-start;
+  background-color: #f3f4f8;
 }
 
 .rmBtn {
-  margin-left: 2rem;
   width: 5rem;
   height: 2rem;
-  font-size: 17px;
-  margin-top: 1.2rem;
+  font-size: 15px;
+}
+
+.container {
+  background-color: #fafafa;
+  padding: 3rem;
+  margin: 3rem;
+  width: 85%;
+  height: 40%;
+}
+
+.add-book {
+  margin-right: 20px;
+  width: 50%;
+  height: 30px;
+}
+
+.category {
+  margin-right: 20px;
+  width: 180px;
+  height: 30px;
+}
+
+.submit {
+  margin-right: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: #0290ff;
+  color: white;
+  font-weight: bold;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-top: -10px;
+}
+
+.gap-r {
+  margin-right: 20px;
+}
+
+.btn {
+  color: #0290ff;
+  background-color: white;
+  border: none;
 }
