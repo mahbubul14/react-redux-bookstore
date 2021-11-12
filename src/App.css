@@ -1,5 +1,11 @@
 body {
   margin: 1rem;
+  background-color: whitesmoke;
+  padding: 40px;
+}
+
+.gray {
+  color: gray;
 }
 
 li {
@@ -11,36 +17,164 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  display: flex;
+.navLink {
+  margin-top: 35px;
+  font-size: 1.2rem;
 }
 
 h1 {
   text-align: center;
   font-size: 2rem;
+  color: #0290ff;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-}
-
-.list {
-  text-align: center;
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  font-size: 1.3rem;
+.nav {
+  justify-content: flex-start;
 }
 
 .rmBtn {
-  margin-left: 2rem;
   width: 5rem;
   height: 2rem;
-  font-size: 17px;
-  margin-top: 1.2rem;
+  font-size: 15px;
+}
+
+.container {
+  background-color: #fafafa;
+  padding: 3rem;
+  margin: 3rem;
+  width: 85%;
+  height: 40%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-top: -10px;
+}
+
+.gap-r {
+  margin-right: 20px;
+}
+
+.btn {
+  color: #0290ff;
+  background-color: #fafafa;
+  border: none;
+}
+
+.btn-container {
+  margin-top: -10px;
+  background-color: #fafafa;
+}
+
+.book-list {
+  justify-content: space-between;
+}
+
+.update-btn {
+  background-color: #0290ff;
+  color: white;
+  width: 150px;
+  height: 30px;
+}
+
+.item {
+  margin-bottom: 50px;
+}
+
+.black {
+  color: black;
+}
+
+.icon {
+  color: #0290ff;
+  margin-top: 20px;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.insert {
+  width: 100%;
+}
+
+.add-book {
+  margin-right: 20px;
+  width: 60%;
+  height: 30px;
+}
+
+.category {
+  margin-right: 20px;
+  height: 30px;
+}
+
+.submit {
+  margin-right: 20px;
+  height: 30px;
+  background-color: #0290ff;
+  color: white;
+  font-weight: bold;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family:
+    "Montserrat",
+    "Gill Sans",
+    "Gill Sans MT",
+    Calibri,
+    "Trebuchet MS",
+    sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.oval {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-color: #0290ff;
+  border-image-source:
+    linear-gradient(
+      to bottom,
+      var(--medium-blue),
+      var(--dodger-blue)
+    );
+  border-image-slice: 1;
+  border-radius: 50%;
+  border-left: 3px solid transparent;
+  transform: rotate(45deg);
+  margin-right: -15%;
 }
