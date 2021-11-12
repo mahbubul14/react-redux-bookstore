@@ -3,34 +3,34 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
-const InsertBook = () => {
+const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
-      author,
+      category,
     };
 
     dispatch(addBook(newBook));
     setTitle('');
-    setAuthor('');
+    setCategory('');
   };
 
   return (
     <form onSubmit={submitBookToStore}>
-      <div>
+      <div className="col-auto">
         <h3>Add Book</h3>
-        <input placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
-        <input placeholder="Add Author" value={author} type="text" onChange={(e) => setAuthor(e.target.value)} />
+        <input className="add-book" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
+        <input className="add-book" placeholder="Add Category" value={category} type="text" onChange={(e) => setCategory(e.target.value)} />
         <button type="submit"> Add Book</button>
       </div>
     </form>
   );
 };
 
-export default InsertBook;
+export default AddBook;
